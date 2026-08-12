@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { chapters, statePaths } from "@/lib/data/chapters";
+import { chapters, statePaths, US_MAP_VIEWBOX } from "@/lib/data/chapters";
 import styles from "./UsMap.module.css";
 
 export default function UsMap() {
@@ -9,7 +9,7 @@ export default function UsMap() {
 
   return (
     <div className={styles.mapContainer}>
-      <svg viewBox="0 0 1000 600" className={styles.map}>
+      <svg viewBox={US_MAP_VIEWBOX} className={styles.map}>
         {Object.entries(statePaths).map(([stateCode, pathData]) => {
           const chapter = chapters[stateCode];
           return (
