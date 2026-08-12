@@ -1,0 +1,217 @@
+.heroSection {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 500px;
+  background-image: url("https://storage.googleapis.com/objects.ucausa.org/index/covor1.png");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.heroCenterTitle {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.heroCenterTitle h1 {
+  font-family: var(--font-display), sans-serif;
+  font-size: 6rem;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.heroBottomContent {
+  position: absolute;
+  bottom: 120px;
+  left: 100px;
+  z-index: 2;
+  text-align: left;
+  max-width: 600px;
+}
+
+.heroBottomContent p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.heroBtn {
+  display: inline-block;
+  background-color: #9e2c74;
+  color: #ffffff;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.heroBtn:hover {
+  background-color: #7a225a;
+}
+
+.heroBtnGroup {
+  display: inline-flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.heroBtnSecondary {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #9e2c74;
+  border: 2px solid #ffffff;
+}
+
+.heroBtnSecondary:hover {
+  background-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    height: 60vh;
+    min-height: 400px;
+  }
+
+  .heroCenterTitle h1 {
+    font-size: 2.5rem;
+  }
+
+  .heroBottomContent {
+    bottom: 30px;
+    left: 20px;
+    right: 20px;
+  }
+}
+
+/* Mission */
+.missionSection {
+  padding: 80px 20px;
+  background-color: #ffffff;
+}
+
+.missionContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.missionLeft {
+  flex: 1;
+}
+
+.missionLeft h2 {
+  font-family: var(--font-display), sans-serif;
+  font-size: 3rem;
+  color: #000065;
+  margin: 0;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.missionRight {
+  flex: 2;
+}
+
+.missionRight p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .missionContainer {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+/* News */
+.newsSection {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+}
+
+.newsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.newsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #eaeaea;
+  padding-bottom: 15px;
+}
+
+.eyebrow {
+  display: block;
+  color: #9e2c74;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.newsHeader h2 {
+  margin: 0;
+  color: #000;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.viewAllLink {
+  display: flex;
+  align-items: center;
+  color: #000065;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.viewAllLink .materialSymbolsOutlined {
+  margin-left: 5px;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.viewAllLink:hover {
+  color: #9e2c74;
+}
+
+.viewAllLink:hover .materialSymbolsOutlined {
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .newsHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}

@@ -1,0 +1,558 @@
+.youthleaderHero {
+  position: relative;
+  min-height: 45vh;
+  background-image: url("https://storage.googleapis.com/objects.ucausa.org/program/youthleader2.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  padding: 120px 20px 60px;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.heroContent h1 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  font-family: var(--font-display), sans-serif;
+}
+
+.heroContent p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.watchVideoBtn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 30px;
+  background-color: #9e2c74;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.watchVideoBtn:hover {
+  background-color: #7a2259;
+}
+
+/* Feature Section */
+.featureSection {
+  background-color: #f9f9f9;
+  padding: 80px 20px;
+}
+
+.featureContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.featureLeft {
+  position: relative;
+}
+
+.imageContainer {
+  position: relative;
+  padding-top: 100%;
+  width: 100%;
+}
+
+.imageContainer > img,
+.imageContainer > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  border: none;
+}
+
+.imageContainer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(238, 221, 204, 0.6), rgba(213, 184, 162, 0.4));
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.featureRight {
+  padding-left: 30px;
+}
+
+.eyebrow {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #7a2259;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.featureRight h2 {
+  margin: 0 0 25px 0;
+  line-height: 1.2;
+}
+
+.chineseTitle {
+  font-weight: bold;
+  font-size: 2rem;
+  display: block;
+  color: #333;
+}
+
+.englishTitle {
+  font-size: 2.8rem;
+  color: #666;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: block;
+}
+
+.featureRight p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.featureList li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.featureIcon {
+  flex-shrink: 0;
+  margin-right: 15px;
+  width: 32px;
+  height: 32px;
+  color: #9e2c74;
+}
+
+.featureIcon .materialSymbolsOutlined {
+  font-size: 32px;
+}
+
+.featureText h4 {
+  margin: 0 0 5px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.featureText p {
+  margin: 0;
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.textDarkBlue {
+  color: #000065 !important;
+}
+
+.textSlateGrey {
+  color: #708090 !important;
+}
+
+/* Mentors Section */
+.mentorsSection {
+  padding: 100px 20px;
+  background-color: #ffffff;
+}
+
+.mentorsHeader {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.mentorsEyebrow {
+  color: #9e2c74;
+}
+
+.mentorsHeader h2 {
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+}
+
+.leadParagraph {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #777;
+  font-weight: 300;
+  margin: 0;
+}
+
+.mentorsVideoContainer {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.mentorsVideoContainer iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.mentorsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mentorCard {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mentorCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.cardContent {
+  padding: 35px 30px;
+  flex-grow: 1;
+}
+
+.cardKicker {
+  color: #9e2c74;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.cardTitle {
+  color: #000065;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0 0 15px 0;
+}
+
+.cardDescription {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Friendship Section */
+.friendshipSection {
+  background-color: #000065;
+  padding: 100px 20px;
+}
+
+.friendshipContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.friendshipEyebrow {
+  color: #e56eb3;
+}
+
+.textWhite {
+  color: #ffffff !important;
+}
+
+.textLightPurple {
+  color: #b6c4ff !important;
+}
+
+.trackingTight {
+  letter-spacing: -0.04em !important;
+}
+
+.friendshipDescription {
+  color: #d0d0d0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+.friendshipVideoContainer {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.friendshipVideoContainer iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none;
+}
+
+/* Action Plan Section */
+.actionPlanSection {
+  padding: 100px 20px;
+  background-color: #ffffff;
+}
+
+.actionPlanContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.actionDescription {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-top: 15px;
+}
+
+.actionCard {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 40px 30px;
+  height: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.borderMagenta {
+  border-left: 6px solid #9e2c74;
+}
+
+.borderNavy {
+  border-left: 6px solid #000065;
+}
+
+/* CTA Hero Section */
+.ctaHero {
+  background: radial-gradient(circle at center, #6a3ab2 0%, #1a0f3c 100%);
+  padding: 120px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ctaContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ctaEyebrow {
+  color: #e56eb3;
+  margin-bottom: 15px;
+}
+
+.ctaContainer h1 {
+  margin: 0 0 25px 0;
+  line-height: 1.2;
+}
+
+.ctaDescription {
+  max-width: 600px;
+  color: #d0d0d0;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.ctaImage {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Empowerment Section */
+.empowermentSection {
+  padding: 100px 20px;
+  background-color: #ffffff;
+}
+
+.empowermentContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.empowermentEyebrow {
+  color: #9e2c74;
+}
+
+.empowermentLeft h1 {
+  margin: 0 0 30px 0;
+  line-height: 1.2;
+}
+
+.empowermentLeft .chineseTitle {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.gradientText {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #000065, #9e2c74);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.empowermentBody {
+  font-size: 1.15rem;
+  line-height: 2;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.empowermentQuote {
+  margin: 40px 0 0 0;
+  padding-left: 25px;
+  border-left: 5px solid #9e2c74;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #333;
+  line-height: 1.8;
+}
+
+.empowermentRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagePlate {
+  background-color: #f4f4f4;
+  padding: 30px;
+  border-radius: 60px 10px 60px 10px;
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.empowermentVideo {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  display: block;
+  border: none;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 992px) {
+  .featureContainer {
+    grid-template-columns: 1fr;
+    gap: 80px;
+  }
+
+  .featureRight {
+    padding-left: 0;
+  }
+
+  .imageContainer {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .mentorsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .friendshipContainer {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .actionPlanContainer {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .empowermentContainer {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .gradientText {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .chineseTitle {
+    font-size: 1.8rem;
+  }
+
+  .englishTitle {
+    font-size: 2.2rem;
+  }
+
+  .mentorsGrid {
+    grid-template-columns: 1fr;
+  }
+}

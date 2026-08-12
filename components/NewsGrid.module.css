@@ -1,0 +1,134 @@
+.newsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.newsCard {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.newsCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cardVisual {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #e0e0e0;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.cardVisual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.categoryBadge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 6px 12px;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.catMaroon {
+  background-color: #9e2c74;
+}
+.catNavy {
+  background-color: #000065;
+}
+.catGold {
+  background-color: #d4af37;
+  color: #000;
+}
+
+.cardBody {
+  padding: 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.timestamp {
+  display: block;
+  color: #9e2c74;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.cardTitle {
+  margin: 0 0 12px 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #222;
+  line-height: 1.3;
+}
+
+.cardSnippet {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.readMore {
+  display: inline-flex;
+  align-items: center;
+  color: #000065;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin-top: auto;
+}
+
+.readMore .materialSymbolsOutlined {
+  font-size: 1.1rem;
+  margin-left: 4px;
+  transition: transform 0.3s ease;
+}
+
+.readMore:hover {
+  color: #9e2c74;
+}
+
+.readMore:hover .materialSymbolsOutlined {
+  transform: translateX(4px);
+}
+
+@media (max-width: 992px) {
+  .newsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .newsGrid {
+    grid-template-columns: 1fr;
+  }
+}

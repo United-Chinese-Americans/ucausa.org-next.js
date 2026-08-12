@@ -1,0 +1,287 @@
+.donateHero {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 300px;
+  background-image: url("https://storage.googleapis.com/objects.ucausa.org/donate/donate1.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+}
+
+.heroContent h1 {
+  font-family: var(--font-display), sans-serif;
+  font-size: 4rem;
+  margin: 0;
+}
+
+.heroContent p {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  font-weight: 300;
+}
+
+.heroBtn {
+  background-color: transparent;
+  color: white;
+  padding: 10px 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 15px;
+  font-size: 1.05rem;
+  border: 2px solid white;
+}
+
+.heroBtn:first-of-type {
+  margin-left: 0;
+}
+
+.heroBtn:hover {
+  background-color: white;
+  color: black;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .heroContent h1 {
+    font-size: 2.5rem;
+  }
+  .heroContent p {
+    font-size: 1.2rem;
+  }
+  .heroBtn {
+    padding: 12px 10px;
+    font-size: 1rem;
+    display: block;
+    margin: 10px auto 0;
+    max-width: 280px;
+  }
+}
+
+/* Support */
+.supportSection {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.supportSection h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+  font-family: var(--font-display), sans-serif;
+}
+
+.supportContainer {
+  display: flex;
+  align-items: stretch;
+  gap: 40px;
+}
+
+.supportImage {
+  flex: 1;
+}
+
+.supportImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.supportText {
+  flex: 1;
+}
+
+.supportText p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  .supportContainer {
+    flex-direction: column;
+  }
+  .supportImage img {
+    height: auto;
+  }
+  .supportSection h2 {
+    font-size: 2rem;
+  }
+}
+
+.paymentNote {
+  color: red;
+}
+
+/* Donation info */
+.donationInfo {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+}
+
+.donationInfo p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.donationInfo a {
+  color: #9e2c74;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.donationInfo a:hover {
+  text-decoration: underline;
+}
+
+/* Timeline */
+.otherWaysSection {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.otherWaysSection h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  color: #000065;
+  font-family: var(--font-display), sans-serif;
+}
+
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 25px;
+  width: 2px;
+  background-color: #ddd;
+  z-index: 0;
+}
+
+.timelineItem {
+  display: flex;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.timelineItem:last-child {
+  margin-bottom: 0;
+}
+
+.timelineMarker {
+  flex: 0 0 50px;
+  width: 50px;
+  height: 50px;
+  background-color: #9e2c74;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 1;
+  margin-right: 30px;
+  box-shadow: 0 0 0 5px #f9f9f9;
+}
+
+.timelineContent {
+  flex: 1;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.timelineContent h3 {
+  margin-top: 0;
+  color: #000065;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.timelineContent p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.timelineContent p:last-child {
+  margin-bottom: 0;
+}
+
+.timelineContent a {
+  color: #9e2c74;
+  word-break: break-all;
+}
+
+.address {
+  font-weight: bold;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.note {
+  font-style: italic;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px;
+  }
+  .timelineMarker {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    font-size: 1.2rem;
+    margin-right: 20px;
+  }
+  .timelineContent {
+    padding: 20px;
+  }
+  .otherWaysSection h2 {
+    font-size: 2rem;
+  }
+}

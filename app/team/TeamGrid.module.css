@@ -1,0 +1,94 @@
+.boardGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.boardCard {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 30px;
+}
+
+.boardCard:hover {
+  transform: translateY(-5px);
+}
+
+.boardCard img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  flex-shrink: 0;
+  margin-right: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cardInfo {
+  padding: 0;
+  flex: 1;
+}
+
+.cardInfo h3 {
+  margin: 0 0 5px;
+  color: #000065;
+  font-size: 1.4rem;
+}
+
+.cardInfo h4 {
+  margin: 0 0 15px;
+  color: #9e2c74;
+  font-size: 1rem;
+  font-weight: 600;
+  min-height: 1.2em;
+}
+
+.cardInfo p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444;
+  margin: 0;
+  white-space: pre-line;
+}
+
+@media (max-width: 768px) {
+  .boardCard {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .boardCard img {
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.toggleContainer {
+  text-align: center;
+}
+
+.boardBtn {
+  background-color: #9e2c74;
+  color: #ffffff;
+  border: none;
+  padding: 12px 35px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boardBtn:hover {
+  background-color: #7a225a;
+}

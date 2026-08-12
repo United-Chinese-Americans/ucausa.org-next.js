@@ -1,0 +1,87 @@
+.siteFooter {
+  width: 100%;
+  color: #ffffff;
+}
+
+.footerTop {
+  background-color: #000065;
+  padding: 40px 200px;
+  display: block;
+}
+
+.footerCta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerContentLeft h3 {
+  margin-top: 0;
+  font-size: 32px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-family: var(--font-display), sans-serif;
+  font-weight: 400;
+}
+
+.footerContentLeft p {
+  margin: 0;
+  font-size: 16px;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+.footerDonateBtn {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 15px 40px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+}
+
+.footerDonateBtn:hover {
+  background-color: #d81b60;
+  border-color: #d81b60;
+}
+
+.footerDivider {
+  border: 0;
+  border-top: 1.5px solid rgba(255, 255, 255, 1);
+  margin: 30px 0;
+}
+
+.footerOrgName {
+  margin: 0;
+  font-weight: bold;
+}
+
+.footerAddress {
+  margin: 0;
+}
+
+.footerEin {
+  margin: 10px 0 0 0;
+}
+
+.footerBottom {
+  background-color: #000045;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid #6780e1;
+}
+
+@media (max-width: 992px) {
+  .footerTop {
+    padding: 40px 20px;
+  }
+
+  .footerCta {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+}

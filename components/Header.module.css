@@ -1,0 +1,258 @@
+.siteHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: transparent;
+  white-space: nowrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.siteHeader.scrolled {
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.headerLeft {
+  flex: 0 0 auto;
+}
+
+.logoLink {
+  display: block;
+}
+
+.logoImg {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+.headerCenter {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+  align-items: center;
+}
+
+.mainNav {
+  display: flex;
+  align-items: center;
+}
+
+.mainNav > a,
+.dropdown > a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.siteHeader.scrolled .mainNav > a,
+.siteHeader.scrolled .dropdown > a {
+  color: #333;
+}
+
+.mainNav > a:hover,
+.dropdown > a:hover {
+  color: #0056b3;
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 220px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  top: 100%;
+  left: 0;
+  border-top: 3px solid #d81b60;
+  text-align: left;
+}
+
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+
+.dropdownContent a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  margin: 0;
+  font-weight: normal;
+  font-size: 14px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.dropdownContent a:hover {
+  background-color: #f9f9f9;
+  color: #d81b60;
+}
+
+.dropdown:hover > a {
+  color: #0056b3;
+}
+
+.dropdownToggle {
+  display: none;
+}
+
+.headerRight {
+  flex: 0 0 auto;
+}
+
+.donateBtn {
+  background-color: #d81b60;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.donateBtn:hover {
+  background-color: #b0154e;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  z-index: 2000;
+  margin-left: 15px;
+}
+
+.hamburger .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.siteHeader.scrolled .hamburger .bar {
+  background-color: #333;
+}
+
+@media (max-width: 992px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .headerCenter {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 80px;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1500;
+    overflow-y: auto;
+  }
+
+  .headerCenter.active {
+    right: 0;
+  }
+
+  .mainNav {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .mainNav > a,
+  .dropdown {
+    width: 100%;
+    margin: 0;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+  }
+
+  .mainNav > a,
+  .dropdown > a {
+    color: #333;
+  }
+
+  .dropdown {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    position: relative;
+  }
+
+  .dropdownContent {
+    position: relative;
+    box-shadow: none;
+    border-top: none;
+    background-color: transparent;
+    padding-left: 20px;
+    width: 100%;
+    margin-top: 0;
+    top: 0;
+    left: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  .dropdownToggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    transition: transform 0.3s ease;
+    line-height: 1;
+  }
+
+  .dropdown.active .dropdownToggle {
+    transform: rotate(90deg);
+  }
+
+  .dropdown:hover .dropdownContent {
+    display: none;
+  }
+
+  .dropdown.active .dropdownContent {
+    display: block;
+  }
+}

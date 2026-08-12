@@ -1,0 +1,86 @@
+.newsHero {
+  position: relative;
+  min-height: 45vh;
+  background-color: #000065;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  padding: 120px 20px 60px;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.heroContent h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  font-family: var(--font-display), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.newsSection {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+}
+
+.newsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.newsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #eaeaea;
+  padding-bottom: 15px;
+}
+
+.eyebrow {
+  display: block;
+  color: #9e2c74;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.newsHeader h2 {
+  margin: 0;
+  color: #000;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .newsHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .newsHero {
+    min-height: 40vh;
+  }
+}

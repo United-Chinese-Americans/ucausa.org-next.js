@@ -1,0 +1,51 @@
+.mapContainer {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.map {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.state {
+  fill: #e0e0e0;
+  stroke: #ffffff;
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.hasChapter {
+  fill: #000065;
+  cursor: pointer;
+}
+
+.hasChapter:hover {
+  fill: #9e2c74;
+  transform: scale(1.05);
+  transform-box: fill-box;
+  transform-origin: center;
+  stroke: #333;
+}
+
+.tooltip {
+  position: fixed;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  pointer-events: none;
+  z-index: 1000;
+  white-space: nowrap;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tooltipVisible {
+  display: block;
+}
