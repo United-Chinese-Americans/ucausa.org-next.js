@@ -1,5 +1,6 @@
 import Link from "next/link";
 import NewsGrid from "@/components/NewsGrid";
+import AreaOfFocus from "./AreaOfFocus";
 import { conventionNews } from "@/lib/data/conventionNews";
 import styles from "./Home.module.css";
 
@@ -42,6 +43,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <AreaOfFocus />
 
       <section className={styles.newsSection}>
         <div className={styles.newsContainer}>

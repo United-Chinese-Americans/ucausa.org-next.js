@@ -32,6 +32,7 @@ const NAV_ITEMS: NavItem[] = [
     label: "CHINESE AMERICAN CONVENTION",
     href: "/convention",
     dropdown: [
+      { label: "2026 Convention", href: "https://convention.ucausa.org", external: true },
       { label: "Chinese Americans Convention News", href: "/convention/news" },
     ],
   },
@@ -145,6 +146,9 @@ export default function Header() {
         </nav>
       </div>
       <div className={styles.headerRight}>
+        <Link href="/join" className={styles.joinBtn}>
+          JOIN US
+        </Link>
         <Link href="/donate" className={styles.donateBtn}>
           DONATE TODAY
         </Link>

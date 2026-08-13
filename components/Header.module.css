@@ -64,7 +64,7 @@
 
 .mainNav > a:hover,
 .dropdown > a:hover {
-  color: #0056b3;
+  color: #FFFFFF;
 }
 
 .dropdown {
@@ -108,7 +108,7 @@
 }
 
 .dropdown:hover > a {
-  color: #0056b3;
+  color: #FFFFFF;
 }
 
 .dropdownToggle {
@@ -131,6 +131,30 @@
 
 .donateBtn:hover {
   background-color: #b0154e;
+}
+
+.joinBtn {
+  display: inline-block;
+  background-color: transparent;
+  color: #ffffff;
+  padding: 8px 18px;
+  margin-right: 12px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.joinBtn:hover {
+  background-color: #d81b60;
+}
+
+.siteHeader.scrolled .joinBtn {
+  color: #333;
+}
+
+.siteHeader.scrolled .joinBtn:hover {
+  color: #ffffff;
 }
 
 .hamburger {
@@ -250,6 +274,16 @@
 
   .dropdown:hover .dropdownContent {
     display: none;
+  }
+
+  .joinBtn,
+  .donateBtn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .joinBtn {
+    margin-right: 8px;
   }
 
   .dropdown.active .dropdownContent {

@@ -1,0 +1,96 @@
+.section {
+  padding: 80px 20px;
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.heading h2 {
+  font-family: var(--font-display), sans-serif;
+  font-size: 2.8rem;
+  color: #000065;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.headingRule {
+  width: 70px;
+  height: 4px;
+  background-color: #9e2c74;
+  margin: 20px auto 60px;
+  border-radius: 2px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 70px;
+}
+
+.row:last-child {
+  margin-bottom: 0;
+}
+
+.rowReverse {
+  flex-direction: row-reverse;
+}
+
+.imageCol {
+  flex: 1;
+  min-width: 0;
+}
+
+.imageCol img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  display: block;
+}
+
+.textCol {
+  flex: 1;
+  min-width: 0;
+}
+
+.number {
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.1rem;
+  color: #9e2c74;
+  margin-bottom: 12px;
+}
+
+.textCol h3 {
+  font-size: 1.6rem;
+  color: #000065;
+  margin: 0 0 15px 0;
+}
+
+.textCol p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #555;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .row,
+  .rowReverse {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .imageCol img {
+    height: 260px;
+  }
+}
