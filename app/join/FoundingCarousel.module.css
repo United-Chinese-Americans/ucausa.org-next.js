@@ -23,8 +23,9 @@
 }
 
 .slide {
-  min-width: 100%;
+  flex: 0 0 50%;
   box-sizing: border-box;
+  padding: 0 6px;
 }
 
 .slide img {
@@ -71,6 +72,9 @@
   }
   .nextBtn {
     right: 0;
+  }
+  .slide {
+    flex-basis: 100%;
   }
 }
 

@@ -2,6 +2,10 @@ export type TeamMember = {
   name: string;
   title: string;
   intro: string;
+  // Fine-tunes framing for source photos that aren't a pre-cropped, face-centered
+  // square like the rest of the set (e.g. a taller headshot with room below the chin).
+  // `origin` is a CSS transform-origin value (kept fixed while `scale` zooms in on it).
+  imageAdjust?: { scale: number; origin: string };
 };
 
 // Image for member at array index i lives at .../team/team${i+1}.png (position-indexed, matches legacy site).
@@ -60,6 +64,7 @@ export const boardMembers: TeamMember[] = [
     name: "Hardy Li 黎观城",
     title: "Board Member",
     intro: "Hardy Li is the Chairman of CONPAC Group, an engineering, architectural, real estate development, farming, and manufacturing conglomerate based in the US PNW. Formerly working for two of the leading international engineering firms, Hardy managed over 50 major public infrastructure projects including 16 light rail and streetcar projects throughout the States and Central America. Hardy has involved in community services for over 2 decades. He is the founding member of UCA, currently Chairman of the Board of UCA Washington. He served as 2 term presidents of the Chinese Friendship Association of Portland; is Chairman of the Portland Chinese (Golf) Open.",
+    imageAdjust: { scale: 1.3, origin: "50% 37%" },
   },
   {
     name: "Paul Li 李秋波",
@@ -113,7 +118,7 @@ export const boardMembers: TeamMember[] = [
     intro: "Jan (Jian) Xie (解健) is an educator, photographer, and community leader dedicated to promoting Asian culture, education, and unity. She is the Founder and President of the Asian Culture and Education Society USA (ACAESUSA) and Treasurer of the Asian American Unity Coalition (AAUC). Jan serves on multiple nonprofit boards, including SafeHorns, the Gendercide Awareness Project, Destination Imagination Dallas Region, and the ACP Foundation. Her leadership and volunteer work focus on empowering youth, fostering cultural understanding, and supporting diverse communities across the U.S. Jan Xie is an At-Large Board Member, Secretary, and Executive Team Member of United Chinese Americans (UCA).",
   },
   {
-    name: "Gary Yu 俞国梁",
+    name: "Gary Yu",
     title: "Board Member",
     intro: "President of the Massachusetts Chapter of the United Chinese American(UCA). Chair of New England Chinese American Alliance (NECAA). President of the Boston Chapter of the Asian Pacific Islander American Public Affairs Association (APAPA). Founder and CEO of Boston International Media Consulting and Boston Asian Radio & TV.",
   },
@@ -175,6 +180,7 @@ export const executiveMembers: TeamMember[] = [
     name: "Hardy Li 黎观城",
     title: "Board Member",
     intro: "Hardy Li is the Chairman of CONPAC Group, an engineering, architectural, real estate development, farming, and manufacturing conglomerate based in the US PNW. Formerly working for two of the leading international engineering firms, Hardy managed over 50 major public infrastructure projects including 16 light rail and streetcar projects throughout the States and Central America. Hardy has involved in community services for over 2 decades. He is the founding member of UCA, currently Chairman of the Board of UCA Washington. He served as 2 term presidents of the Chinese Friendship Association of Portland; is Chairman of the Portland Chinese (Golf) Open.",
+    imageAdjust: { scale: 1.3, origin: "50% 10%" },
   },
   {
     name: "Ray Liang 梁瑞凤",
@@ -213,7 +219,7 @@ export const executiveMembers: TeamMember[] = [
     intro: "Jan (Jian) Xie (解健) is an educator, photographer, and community leader dedicated to promoting Asian culture, education, and unity. She is the Founder and President of the Asian Culture and Education Society USA (ACAESUSA) and Treasurer of the Asian American Unity Coalition (AAUC). Jan serves on multiple nonprofit boards, including SafeHorns, the Gendercide Awareness Project, Destination Imagination Dallas Region, and the ACP Foundation. Her leadership and volunteer work focus on empowering youth, fostering cultural understanding, and supporting diverse communities across the U.S. Jan Xie is an At-Large Board Member, Secretary, and Executive Team Member of United Chinese Americans (UCA).",
   },
   {
-    name: "Gary Yu 俞国梁",
+    name: "Gary Yu",
     title: "Executive team member, Chair of Communication Committee",
     intro: "President of the Massachusetts Chapter of the United Chinese American(UCA).\nChair of New England Chinese American Alliance (NECAA).\nPresident of the Boston Chapter of the Asian Pacific Islander American Public Affairs Association (APAPA).\nFounder and CEO of Boston International Media Consulting and Boston Asian Radio & TV.",
   },

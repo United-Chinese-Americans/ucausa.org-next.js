@@ -11,6 +11,7 @@ const TOPICS = [
     id: "uca-news",
     title: "UCA News",
     description: "Announcements and coverage of UCA activities nationwide.",
+    href: "/convention/news",
   },
   {
     id: "press-release",
@@ -51,13 +52,25 @@ export default function InformationPage() {
 
       <section className={styles.section}>
         <div className={styles.grid}>
-          {TOPICS.map((topic) => (
-            <div key={topic.id} id={topic.id} className={styles.card}>
-              <span className={styles.badge}>Coming Soon</span>
-              <h3>{topic.title}</h3>
-              <p>{topic.description}</p>
-            </div>
-          ))}
+          {TOPICS.map((topic) =>
+            topic.href ? (
+              <Link
+                key={topic.id}
+                id={topic.id}
+                href={topic.href}
+                className={`${styles.card} ${styles.cardLink}`}
+              >
+                <h3>{topic.title}</h3>
+                <p>{topic.description}</p>
+              </Link>
+            ) : (
+              <div key={topic.id} id={topic.id} className={styles.card}>
+                <span className={styles.badge}>Coming Soon</span>
+                <h3>{topic.title}</h3>
+                <p>{topic.description}</p>
+              </div>
+            )
+          )}
         </div>
       </section>
 

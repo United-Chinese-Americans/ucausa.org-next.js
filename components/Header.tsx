@@ -13,6 +13,7 @@ type NavLink = {
 type NavItem = {
   label: string;
   href: string;
+  external?: boolean;
   dropdown?: NavLink[];
 };
 
@@ -30,18 +31,15 @@ const NAV_ITEMS: NavItem[] = [
   },
   {
     label: "CHINESE AMERICAN CONVENTION",
-    href: "/convention",
-    dropdown: [
-      { label: "2026 Convention", href: "https://convention.ucausa.org", external: true },
-      { label: "Chinese Americans Convention News", href: "/convention/news" },
-    ],
+    href: "https://convention.ucausa.org",
+    external: true,
   },
   {
     label: "PROGRAMS",
     href: "/program",
     dropdown: [
       { label: "UCA Community Foundation", href: "https://ucacf.org", external: true },
-      { label: "UCA’s First Chinese American Youth Leadership Program", href: "/program/youth-leadership" },
+      { label: "UCA’s Chinese American Youth Leadership Program", href: "/program/youth-leadership" },
       { label: "WAVES – Youth Mental Health Collaborative", href: "https://ucawaves.org/", external: true },
       { label: "UCA National Pickleball League", href: "#" },
     ],
@@ -51,7 +49,7 @@ const NAV_ITEMS: NavItem[] = [
     href: "/information",
     dropdown: [
       { label: "UCA Weekly", href: "/information#uca-weekly" },
-      { label: "UCA News", href: "/information#uca-news" },
+      { label: "UCA News", href: "/convention/news" },
       { label: "Press Release", href: "/information#press-release" },
       { label: "Find Help & Resources", href: "/information#find-help-resources" },
       { label: "Asian American Advocacy", href: "/information#asian-american-advocacy" },
@@ -59,7 +57,7 @@ const NAV_ITEMS: NavItem[] = [
       { label: "Contact Your Congress Member", href: "/information#contact-congress" },
     ],
   },
-  { label: "EVENTS", href: "/convention" },
+  { label: "EVENTS", href: "/events" },
   { label: "CONTACT US", href: "/contact" },
 ];
 
@@ -137,6 +135,10 @@ export default function Header() {
                   )}
                 </div>
               </div>
+            ) : item.external ? (
+              <a key={item.label} href={item.href} target="_blank" rel="noopener noreferrer">
+                {item.label}
+              </a>
             ) : (
               <Link key={item.label} href={item.href}>
                 {item.label}

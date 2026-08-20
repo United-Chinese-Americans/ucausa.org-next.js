@@ -84,6 +84,15 @@
   background-color: #ffffff;
 }
 
+.heroBtnDonate {
+  background-color: #d81b60;
+  color: #ffffff;
+}
+
+.heroBtnDonate:hover {
+  background-color: #b0154e;
+}
+
 @media (max-width: 768px) {
   .heroSection {
     height: 60vh;
@@ -98,6 +107,21 @@
     bottom: 30px;
     left: 20px;
     right: 20px;
+  }
+
+  .heroBtnGroup {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+
+  .heroBtn {
+    flex: 1 1 0;
+    padding: 10px 8px;
+    font-size: 0.85rem;
+    text-align: center;
+    white-space: normal;
   }
 }
 
@@ -144,6 +168,69 @@
   .missionContainer {
     flex-direction: column;
     gap: 30px;
+  }
+}
+
+/* History */
+.historySection {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+}
+
+.historyContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.historyLeft {
+  flex: 1;
+}
+
+.historyLeft h2 {
+  font-family: var(--font-display), sans-serif;
+  font-size: 3rem;
+  color: #000065;
+  margin: 0 0 30px 0;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.historyLeft p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+}
+
+.historyRight {
+  flex: 1;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .historyContainer {
+    flex-direction: column;
+    gap: 40px;
+    align-items: stretch;
   }
 }
 

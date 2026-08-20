@@ -1,4 +1,5 @@
 import UsMap from "./UsMap";
+import ChaptersList from "./ChaptersList";
 import PartnersSection from "./PartnersSection";
 import styles from "./About.module.css";
 
@@ -61,6 +62,7 @@ export default function AboutPage() {
         <div className={styles.chaptersContainer}>
           <h2>Our Chapters</h2>
           <UsMap />
+          <ChaptersList />
         </div>
       </section>
 

@@ -1,0 +1,65 @@
+.chaptersList {
+  list-style: none;
+  margin: 40px 0 0;
+  padding: 0;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.chapterCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: #ffffff;
+  border-left: 4px solid #9e2c74;
+  border-radius: 6px;
+  padding: 14px 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  text-align: left;
+}
+
+.chapterInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.stateCode {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #000065;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.stateName {
+  margin: 0;
+  font-weight: bold;
+  color: #000065;
+}
+
+.chapterCard a,
+.chapterName {
+  margin: 2px 0 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.chapterCard a {
+  color: #9e2c74;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.chapterCard a:hover {
+  text-decoration: underline;
+}

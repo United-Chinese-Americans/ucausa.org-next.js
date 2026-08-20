@@ -1,4 +1,5 @@
 import FeedbackForm from "./FeedbackForm";
+import SocialLinks from "@/components/SocialLinks";
 import styles from "./Contact.module.css";
 
 export default function ContactPage() {
@@ -38,6 +39,10 @@ export default function ContactPage() {
           </p>
           <br />
           <p>UCA</p>
+          <div className={styles.socialRow}>
+            <h4>Follow Us</h4>
+            <SocialLinks />
+          </div>
         </div>
       </section>
     </>

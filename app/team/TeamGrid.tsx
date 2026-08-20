@@ -31,11 +31,22 @@ export default function TeamGrid({
       <div className={styles.boardGrid}>
         {visible.map((member, index) => (
           <div key={member.name} className={styles.boardCard}>
-            <img
-              src={`${imageBaseUrl}${index + 1}.png`}
-              alt={member.name}
-              loading="lazy"
-            />
+            <div className={styles.avatar}>
+              <img
+                className={styles.avatarImg}
+                src={`${imageBaseUrl}${index + 1}.png`}
+                alt={member.name}
+                loading="lazy"
+                style={
+                  member.imageAdjust
+                    ? {
+                        transform: `scale(${member.imageAdjust.scale})`,
+                        transformOrigin: member.imageAdjust.origin,
+                      }
+                    : undefined
+                }
+              />
+            </div>
             <div className={styles.cardInfo}>
               <h3>{member.name}</h3>
               <h4>{member.title}</h4>

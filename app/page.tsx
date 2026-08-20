@@ -21,6 +21,9 @@ export default function Home() {
             <Link href="/join" className={`${styles.heroBtn} ${styles.heroBtnSecondary}`}>
               Join us
             </Link>
+            <Link href="/donate" className={`${styles.heroBtn} ${styles.heroBtnDonate}`}>
+              Donate
+            </Link>
           </div>
         </div>
       </section>
@@ -45,6 +48,32 @@ export default function Home() {
       </section>
 
       <AreaOfFocus />
+
+      <section className={styles.historySection}>
+        <div className={styles.historyContainer}>
+          <div className={styles.historyLeft}>
+            <h2>Our History</h2>
+            <p>
+              United Chinese Americans (UCA) was formed at the first Chinese
+              American Convention in September 2016. UCA was incorporated and
+              received IRS 501(c)(3) nonprofit status in 2017. UCA has since
+              grown into a national federation of 12 local chapters and over
+              30 community partners. UCA has also formed several partnerships
+              with regional and national nonprofit organizations.
+            </p>
+          </div>
+          <div className={styles.historyRight}>
+            <div className={styles.videoWrapper}>
+              <iframe
+                src="https://www.youtube.com/embed/5W8RGDTOjv4"
+                title="UCA History Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className={styles.newsSection}>
         <div className={styles.newsContainer}>

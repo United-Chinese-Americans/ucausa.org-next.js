@@ -3,6 +3,21 @@ export type Chapter = {
   url?: string;
 };
 
+export const stateNames: Record<string, string> = {
+  AZ: "Arizona",
+  CT: "Connecticut",
+  IA: "Iowa",
+  IL: "Illinois",
+  MA: "Massachusetts",
+  NJ: "New Jersey",
+  CA: "California",
+  NV: "Nevada",
+  WA: "Washington",
+  WI: "Wisconsin",
+  WV: "West Virginia",
+  FL: "Florida",
+};
+
 export const chapters: Record<string, Chapter> = {
   AZ: { name: "UCA Arizona" },
   CT: { name: "UCA CT" },

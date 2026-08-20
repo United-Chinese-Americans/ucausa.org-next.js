@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SocialLinks from "./SocialLinks";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -14,9 +15,14 @@ export default function Footer() {
             </p>
           </div>
           <div className={styles.footerContentRight}>
-            <Link href="/donate" className={styles.footerDonateBtn}>
-              DONATE TODAY
-            </Link>
+            <div className={styles.footerBtnGroup}>
+              <Link href="/join" className={styles.footerJoinBtn}>
+                JOIN US
+              </Link>
+              <Link href="/donate" className={styles.footerDonateBtn}>
+                DONATE
+              </Link>
+            </div>
           </div>
         </div>
         <hr className={styles.footerDivider} />
@@ -34,6 +40,7 @@ export default function Footer() {
       </div>
       <div className={styles.footerBottom}>
         <p>&copy; {new Date().getFullYear()} United Chinese Americans. All rights reserved.</p>
+        <SocialLinks variant="dark" />
       </div>
     </footer>
   );

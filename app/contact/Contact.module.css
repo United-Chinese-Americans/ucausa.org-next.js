@@ -188,6 +188,16 @@
   text-decoration: underline;
 }
 
+.socialRow {
+  margin-top: 20px;
+}
+
+.socialRow h4 {
+  margin: 0 0 10px;
+  color: #000065;
+  font-size: 1rem;
+}
+
 @media (max-width: 768px) {
   .mapContactSection {
     flex-direction: column;

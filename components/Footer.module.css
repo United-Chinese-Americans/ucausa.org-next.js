@@ -31,7 +31,14 @@
   line-height: 1.5;
 }
 
-.footerDonateBtn {
+.footerBtnGroup {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footerDonateBtn,
+.footerJoinBtn {
   background-color: transparent;
   border: 2px solid #ffffff;
   color: #ffffff;
@@ -39,12 +46,18 @@
   text-decoration: none;
   font-weight: bold;
   border-radius: 40px;
+  white-space: nowrap;
   transition: all 0.3s ease;
 }
 
 .footerDonateBtn:hover {
   background-color: #d81b60;
   border-color: #d81b60;
+}
+
+.footerJoinBtn:hover {
+  background-color: #9e2c74;
+  border-color: #9e2c74;
 }
 
 .footerDivider {
@@ -69,9 +82,17 @@
 .footerBottom {
   background-color: #000045;
   padding: 20px;
-  text-align: center;
   font-size: 14px;
   border-top: 1px solid #6780e1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footerBottom p {
+  margin: 0;
 }
 
 @media (max-width: 992px) {
@@ -83,5 +104,25 @@
     flex-direction: column;
     text-align: center;
     gap: 20px;
+  }
+
+  .footerBtnGroup {
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .footerDonateBtn,
+  .footerJoinBtn {
+    flex: 1 1 0;
+    padding: 12px 10px;
+    font-size: 14px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .footerBottom {
+    justify-content: center;
+    text-align: center;
   }
 }
