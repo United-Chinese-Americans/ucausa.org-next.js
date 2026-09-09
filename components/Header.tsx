@@ -29,6 +29,7 @@ const NAV_ITEMS: NavItem[] = [
       { label: "Join UCA", href: "/join" },
     ],
   },
+  { label: "VOTE", href: "/vote" },
   {
     label: "CHINESE AMERICAN CONVENTION",
     href: "https://convention.ucausa.org",
