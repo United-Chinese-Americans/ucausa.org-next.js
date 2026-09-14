@@ -18,6 +18,19 @@ const REQUIREMENTS = [
   "Use your organization's member communication channels at least twice to remind community members about early voting and encourage them to vote on November 3.",
 ];
 
+const RESOURCE_LINKS = [
+  { href: "https://apiavote.org/", label: "https://apiavote.org/" },
+  {
+    href: "https://apiavote.org/how-to-vote/in-your-state/",
+    label: "https://apiavote.org/how-to-vote/in-your-state/",
+  },
+  {
+    href: "https://fairelectionscenter.org/voter-registration-drive-guides/",
+    label: "https://fairelectionscenter.org/voter-registration-drive-guides/",
+  },
+  { href: "http://www.vote411.org/", label: "http://www.vote411.org/" },
+];
+
 const BENEFITS = [
   "Your organization's name and logo will be featured in all relevant UCA promotional materials and permanently displayed on the UCA website.",
   'Your organization will receive the UCA-certified designation and logo of "Civic Leadership Organization," helping strengthen its visibility, credibility, and civic leadership within the local community.',
@@ -151,6 +164,25 @@ export default function VotePage() {
         >
           Join the 2026 National Chinese American Voter Mobilization
         </a>
+      </section>
+
+      <section className={styles.resourcesSection}>
+        <div className={styles.gridContainer}>
+          <h2>Additional Information</h2>
+          <p>
+            For more information on voter registration and helpful
+            resources, you can visit the following websites:
+          </p>
+          <ul className={styles.resourcesList}>
+            {RESOURCE_LINKS.map((link) => (
+              <li key={link.href}>
+                <a href={link.href} target="_blank" rel="noopener noreferrer">
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
     </>
   );

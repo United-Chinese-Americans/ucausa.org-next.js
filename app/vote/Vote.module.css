@@ -266,14 +266,14 @@
   margin: 0 0 25px;
 }
 
-/* Share graphics */
-.shareSection {
+/* Additional information */
+.resourcesSection {
   padding: 70px 20px;
   background-color: #f9f9f9;
   text-align: center;
 }
 
-.shareSection h2 {
+.resourcesSection h2 {
   font-family: var(--font-display), sans-serif;
   font-size: 2rem;
   color: #000065;
@@ -281,10 +281,38 @@
   margin: 0 0 12px;
 }
 
-.shareSection > .gridContainer > p {
+.resourcesSection > .gridContainer > p {
   color: #555;
   font-size: 1.05rem;
   margin: 0 0 40px;
+}
+
+.resourcesList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.resourcesList a {
+  display: block;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 16px 24px;
+  color: #9e2c74;
+  font-weight: 600;
+  text-decoration: none;
+  word-break: break-word;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resourcesList a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {

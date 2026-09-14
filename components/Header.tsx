@@ -31,16 +31,15 @@ const NAV_ITEMS: NavItem[] = [
   },
   { label: "VOTE", href: "/vote" },
   {
-    label: "CHINESE AMERICAN CONVENTION",
-    href: "https://convention.ucausa.org",
-    external: true,
-  },
-  {
     label: "PROGRAMS",
     href: "/program",
     dropdown: [
       { label: "UCA Community Foundation", href: "https://ucacf.org", external: true },
-      { label: "UCA’s Chinese American Youth Leadership Program", href: "/program/youth-leadership" },
+      {
+        label: "CHINESE AMERICAN CONVENTION",
+        href: "https://convention.ucausa.org",
+        external: true,
+      },
       { label: "WAVES – Youth Mental Health Collaborative", href: "https://ucawaves.org/", external: true },
       { label: "UCA National Pickleball League", href: "#" },
     ],
