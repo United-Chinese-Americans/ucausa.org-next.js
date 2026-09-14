@@ -1,5 +1,4 @@
 import styles from "./Vote.module.css";
-import ShareSlider from "./ShareSlider";
 
 const JOIN_URL = "https://shorturl.at/ikzjX";
 const TRAINING_ZOOM_URL =
@@ -32,7 +31,6 @@ export default function VotePage() {
         <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>
           <h1>VOTE</h1>
-          <p>2026 UCA Community Leaders Initiative</p>
         </div>
       </section>
 
@@ -73,9 +71,6 @@ export default function VotePage() {
             >
               Join the Initiative
             </a>
-          </div>
-          <div className={styles.introImage}>
-            <img src="/vote/UCA_vote01.png" alt="2026 UCA Community Leaders Initiative" />
           </div>
         </div>
       </section>
@@ -156,23 +151,6 @@ export default function VotePage() {
         >
           Join the 2026 National Chinese American Voter Mobilization
         </a>
-      </section>
-
-      <section className={styles.shareSection}>
-        <div className={styles.gridContainer}>
-          <h2>Share These Graphics</h2>
-          <p>
-            Download and share these graphics with your organization&rsquo;s
-            network to help spread the word.
-          </p>
-          <ShareSlider
-            slides={[
-              { src: "/vote/UCA_vote01.png", alt: "2026 UCA Community Leaders Initiative flyer" },
-              { src: "/vote/UCA_vote02.png", alt: "Four requirements to qualify as a Partner Organization" },
-              { src: "/vote/UCA_vote03.png", alt: "Benefits of becoming a Partner Organization" },
-            ]}
-          />
-        </div>
       </section>
     </>
   );
